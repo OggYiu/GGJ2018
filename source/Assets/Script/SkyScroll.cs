@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BuildingScroll : MonoBehaviour {
+public class SkyScroll : MonoBehaviour {
 
 	public Transform Background1;
 	public Transform Background2;
@@ -12,8 +12,10 @@ public class BuildingScroll : MonoBehaviour {
 	private int CurrentBackground = 1;
 	public Transform cam;
 
-	private const float Height = 11.8f;
-	private float CurrentHeight = Height*2;
+	private const float Height = 10.5f;
+	private const float StartHeight = 120 + Height;
+
+	private float CurrentHeight = StartHeight;
 	private float BackgroundHeight = Height;
 
 	// Use this for initialization
@@ -24,8 +26,6 @@ public class BuildingScroll : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (cam.position.y >= CurrentHeight + 5) {
-
-			//Debug.Log ("Height " + CurrentHeight);
 			if (CurrentHeight / Height <= MaxFloor + 0.01) {
 				if (CurrentBackground == 1) {
 					Background1.localPosition = new Vector3 (0, Background1.localPosition.y + BackgroundHeight * 3, 0);
@@ -41,7 +41,7 @@ public class BuildingScroll : MonoBehaviour {
 					CurrentBackground = 1;
 				}
 			}
-		} else if (cam.position.y + Height < CurrentHeight && cam.position.y > Height) {
+		} else if (cam.position.y + Height < CurrentHeight && cam.position.y > StartHeight) {
 			CurrentHeight -= Height;
 			CurrentBackground -= 1;
 			if (CurrentBackground == 0) {

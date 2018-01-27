@@ -52,12 +52,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Bullet.cs" />
+     <Compile Include="Assets\DestroyableObject.cs" />
      <Compile Include="Assets\GameMgr.cs" />
-     <Compile Include="Assets\Global.cs" />
      <Compile Include="Assets\Gun.cs" />
+     <Compile Include="Assets\Parcel.cs" />
+     <Compile Include="Assets\ParcelCamera.cs" />
      <Compile Include="Assets\Script\Background.cs" />
      <Compile Include="Assets\Script\BuildingScroll.cs" />
      <Compile Include="Assets\Script\DebugCamera.cs" />
+     <Compile Include="Assets\Script\SkyScroll.cs" />
      <Compile Include="Assets\Singleton.cs" />
      <Compile Include="Assets\Spine\Examples\Scripts\AttackSpineboy.cs" />
      <Compile Include="Assets\Spine\Examples\Scripts\DataAssetsFromExportsExample.cs" />
@@ -172,6 +175,7 @@
      <Compile Include="Assets\Spine\spine-unity\SkeletonUtility\SkeletonUtilityBone.cs" />
      <Compile Include="Assets\Spine\spine-unity\SkeletonUtility\SkeletonUtilityConstraint.cs" />
      <Compile Include="Assets\Spine\spine-unity\SpineAttributes.cs" />
+     <Compile Include="Assets\Walls.cs" />
      <None Include="Assets\Spine\Examples\Spine\Eyes\eyes.atlas.txt" />
      <None Include="Assets\Spine\spine-unity\Shaders\Utility\HiddenPass.shader" />
      <None Include="Assets\Spine\spine-unity\Modules\Shaders\Spine-Skeleton-Fill.shader" />
