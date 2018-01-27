@@ -10,6 +10,7 @@ public class Gun : MonoBehaviour {
     public bool isAutoWeapon = false;
     public Bullet prefabBullet;
     public float gunFireLife = 0.5f;
+    public AudioSource fireSound;
 
     private float coolDownBK = 0;
     private bool isMouseJustDown = false;
@@ -39,6 +40,8 @@ public class Gun : MonoBehaviour {
 
         if ((isMouseJustDown || (isAutoWeapon && isMouseDown)) && isCoolDownFinished())
         {
+            fireSound.Play();
+
             Vector3 mouseScreenPos = Input.mousePosition;
             Vector3 mouseWorldPos = Camera.main.ScreenToWorldPoint(mouseScreenPos);
             mouseWorldPos = new Vector3(mouseWorldPos.x, mouseWorldPos.y, 0);
