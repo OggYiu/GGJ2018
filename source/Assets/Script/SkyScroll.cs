@@ -41,7 +41,7 @@ public class SkyScroll : MonoBehaviour {
 					CurrentBackground = 1;
 				}
 			}
-		} else if (cam.position.y + Height < CurrentHeight && cam.position.y > StartHeight) {
+		} else if (cam.position.y + Height < CurrentHeight + 5 && cam.position.y > StartHeight) {
 			CurrentHeight -= Height;
 			CurrentBackground -= 1;
 			if (CurrentBackground == 0) {
