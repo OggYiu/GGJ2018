@@ -316,6 +316,7 @@
     <Compile Include="Assets\Script\Background.cs" />
     <Compile Include="Assets\Script\BuildingScroll.cs" />
     <Compile Include="Assets\Script\DebugCamera.cs" />
+    <Compile Include="Assets\Script\SkyScroll.cs" />
     <Compile Include="Assets\Singleton.cs" />
     <Compile Include="Assets\Spine\Examples\Scripts\AttackSpineboy.cs" />
     <Compile Include="Assets\Spine\Examples\Scripts\DataAssetsFromExportsExample.cs" />
