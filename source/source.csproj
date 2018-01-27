@@ -306,9 +306,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\GameMgr.cs" />
     <Compile Include="Assets\Global.cs" />
     <Compile Include="Assets\Gun.cs" />
-    <Compile Include="Assets\ShootingMgr.cs" />
     <Compile Include="Assets\Singleton.cs" />
     <Compile Include="Assets\Spine\Examples\Scripts\AttackSpineboy.cs" />
     <Compile Include="Assets\Spine\Examples\Scripts\DataAssetsFromExportsExample.cs" />
