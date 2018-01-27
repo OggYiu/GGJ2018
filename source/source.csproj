@@ -306,7 +306,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="source.Plugins.csproj">
+      <Project>{935F5340-C0E7-A689-92CD-EA5BD0DC3896}</Project>
+      <Name>source.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Bullet.cs" />
+    <Compile Include="Assets\ChansHand.cs" />
     <Compile Include="Assets\DebugController.cs" />
     <Compile Include="Assets\DestroyableObject.cs" />
     <Compile Include="Assets\GameMgr.cs" />
@@ -431,9 +438,11 @@
     <Compile Include="Assets\Spine\spine-unity\SkeletonUtility\SkeletonUtilityBone.cs" />
     <Compile Include="Assets\Spine\spine-unity\SkeletonUtility\SkeletonUtilityConstraint.cs" />
     <Compile Include="Assets\Spine\spine-unity\SpineAttributes.cs" />
+    <Compile Include="Assets\StageUI.cs" />
     <Compile Include="Assets\Walls.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Spine\Examples\Spine\Dragon\dragon.atlas.txt" />
     <None Include="Assets\Spine\Examples\Spine\Dragon\license.txt" />
     <None Include="Assets\Spine\Examples\Spine\Eyes\eyes.atlas.txt" />

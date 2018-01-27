@@ -73,8 +73,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e39dd6cf8c1412a478a69508a2a91f43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fromPosition: {x: -4.9281154, y: -5, z: -1}
-  targetPosition: {x: -4.9281154, y: 1.8530351, z: 0}
+  fromPosition: {x: 0.7956897, y: 74.70902, z: -1}
+  targetPosition: {x: 0.7956897, y: 81.859024, z: 0}
   gun: {fileID: 0}
   prefabGunFire: {fileID: 1564512312136432, guid: a4dab60dd693ad145b04474486e9f03c,
     type: 2}
@@ -113,7 +113,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 56eb73b0cf206b84097ee9883972e708, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e01c8991b3a94429b84cb758395b6991, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

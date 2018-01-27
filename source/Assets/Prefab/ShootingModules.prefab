@@ -176,6 +176,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1489538853834876
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4264886386517596}
+  - component: {fileID: 114587602550542290}
+  m_Layer: 0
+  m_Name: DebugController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
 --- !u!1 &1546752849816262
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,6 +277,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &4264886386517596
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489538853834876}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4545865042737238}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4391960495453348
 Transform:
   m_ObjectHideFlags: 1
@@ -346,6 +375,7 @@ Transform:
   - {fileID: 4973139326614766}
   - {fileID: 4925929189471514}
   - {fileID: 4985769620302292}
+  - {fileID: 4264886386517596}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -645,7 +675,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
@@ -752,7 +782,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: acb9f6fd7de264e4abceeb2f6a65f661, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -993,6 +1023,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8ab6b190554ba4cb98cbd56c307bc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  showGameStart: 0
+  nextLevel: 
   initGunType: 0
   guns:
   - {fileID: 114993852211474278}
@@ -1039,6 +1071,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd367b1ed169eb54e936b197cfdb81c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &114587602550542290
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1489538853834876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61a3ddb40370dde42a80c0f1208823a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
 --- !u!114 &114923479018365102
 MonoBehaviour:
   m_ObjectHideFlags: 1

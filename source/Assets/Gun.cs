@@ -24,6 +24,11 @@ public class Gun : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
+        if (GameMgr.Instance.isGameEnded || !GameMgr.Instance.isGameStarted)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonUp(0))
         {
             isMouseUp = true;

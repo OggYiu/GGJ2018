@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameMgr : Singleton<GameMgr> {
     public enum GunType {
@@ -8,17 +9,84 @@ public class GameMgr : Singleton<GameMgr> {
         MACHINE_GUN,
     }
 
+    public bool showGameStart = false;
+    public string nextLevel;
     public GunType initGunType;
     public Gun[] guns;
+    public bool isGameStarted = false;
+    public bool isGameEnded = false;
+    public SpriteRenderer fadeInOutSpirteRenderer;
+
     private Gun myGun;
+    private Parcel parcel;
 
     protected GameMgr()
     {
     }
 
-    // Use this for initialization
-    void Start ()
+    public void FadeIn()
     {
+        this.fadeInOutSpirteRenderer.gameObject.SetActive(true);
+        this.fadeInOutSpirteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        Hashtable tweenParams = new Hashtable();
+        tweenParams.Add("from", this.fadeInOutSpirteRenderer.color);
+        tweenParams.Add("to", new Color(1.0f, 1.0f, 1.0f, 0f));
+        tweenParams.Add("time", 3.0);
+        tweenParams.Add("onupdate", "OnColorUpdated");
+        tweenParams.Add("oncomplete", "OnFadeInEnded");
+
+        iTween.ValueTo(this.gameObject, tweenParams);
+    }
+
+    private void OnFadeInEnded()
+    {
+        //this.fadeInOutSpirteRenderer.gameObject.SetActive(false);
+    }
+
+    private void OnFadeOutEnded()
+    {
+        SceneManager.LoadScene(this.nextLevel);
+    }
+
+    private void OnColorUpdated(Color color)
+    {
+        this.fadeInOutSpirteRenderer.color = color;
+    }
+
+    public void FadeOut()
+    {
+        this.fadeInOutSpirteRenderer.gameObject.SetActive(true);
+        this.fadeInOutSpirteRenderer.color = new Color(1.0f, 1.0f, 1.0f, 0.0f);
+        Hashtable tweenParams = new Hashtable();
+        tweenParams.Add("from", this.fadeInOutSpirteRenderer.color);
+        tweenParams.Add("to", new Color(1.0f, 1.0f, 1.0f, 1.0f));
+        tweenParams.Add("time", 3.0);
+        tweenParams.Add("onupdate", "OnColorUpdated");
+        tweenParams.Add("oncomplete", "OnFadeOutEnded");
+
+        iTween.ValueTo(this.gameObject, tweenParams);
+    }
+
+    // Use this for initialization
+    void Start()
+    {
+        this.FadeIn();
+
+        this.parcel = FindObjectOfType<Parcel>();
+
+        if(this.showGameStart)
+        {
+            Rigidbody body = this.parcel.GetComponent<Rigidbody>();
+            body.isKinematic = true;
+            body.useGravity = false;
+            StageUI.Instance.ShowStageBegin();
+        }
+        else
+        {
+            Rigidbody body = this.parcel.GetComponent<Rigidbody>();
+            body.isKinematic = false;
+        }
+
         foreach (Gun gun in guns)
         {
             gun.gameObject.SetActive(false);
@@ -26,11 +94,11 @@ public class GameMgr : Singleton<GameMgr> {
 
         ChangeWeapon(initGunType);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    // Update is called once per frame
+    void Update() {
+
+    }
 
     public void ChangeWeapon(GunType gunType)
     {
@@ -47,5 +115,25 @@ public class GameMgr : Singleton<GameMgr> {
         {
             myGun.gameObject.SetActive(true);
         }
+    }
+
+    public void OnLevelStarted()
+    {
+        isGameStarted = true;
+
+        Rigidbody body = this.parcel.GetComponent<Rigidbody>();
+        body.isKinematic = false;
+        body.useGravity = true;
+    }
+
+    public void OnLevelEnded()
+    {
+        Rigidbody body = this.parcel.GetComponent<Rigidbody>();
+        body.isKinematic = true;
+        body.useGravity = false;
+
+        isGameEnded = true;
+
+        FadeOut();
     }
 }

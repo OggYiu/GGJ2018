@@ -306,6 +306,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="source.Plugins.csproj">
+      <Project>{935F5340-C0E7-A689-92CD-EA5BD0DC3896}</Project>
+      <Name>source.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="source.csproj">
       <Project>{8A68DB61-F910-D439-9488-42F6F191B7AD}</Project>
       <Name>source</Name>
@@ -340,6 +344,7 @@
     <Compile Include="Assets\Spine\spine-unity\SkeletonUtility\Editor\SkeletonUtilityInspector.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
     <None Include="Assets\Spine\Examples\Spine\Dragon\dragon.atlas.txt" />
     <None Include="Assets\Spine\Examples\Spine\Dragon\license.txt" />
     <None Include="Assets\Spine\Examples\Spine\Eyes\eyes.atlas.txt" />
