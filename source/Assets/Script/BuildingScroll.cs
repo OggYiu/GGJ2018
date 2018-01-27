@@ -41,7 +41,7 @@ public class BuildingScroll : MonoBehaviour {
 					CurrentBackground = 1;
 				}
 			}
-		} else if (cam.position.y + Height < CurrentHeight + 5 && cam.position.y > Height) {
+		} else if (cam.position.y + Height < CurrentHeight && cam.position.y > Height) {
 			CurrentHeight -= Height;
 			CurrentBackground -= 1;
 			if (CurrentBackground == 0) {
