@@ -90,6 +90,13 @@ public class Gun : MonoBehaviour {
                 //rb.velocity = Vector3.zero;
                 //rb.angularVelocity = Vector3.zero;
                 rb.AddExplosionForce(power, explosionPos, radius, upward);
+
+                DestroyableObject destroyableObject = rb.GetComponent<DestroyableObject>();
+                if(destroyableObject != null)
+                {
+                    rb.useGravity = true;
+                    destroyableObject.StartSelfDestroy();
+                }
                 //Debug.Log("hit " + rb.gameObject.name);
             }
         }
