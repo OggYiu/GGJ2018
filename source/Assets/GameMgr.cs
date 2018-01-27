@@ -83,8 +83,7 @@ public class GameMgr : Singleton<GameMgr> {
         }
         else
         {
-            Rigidbody body = this.parcel.GetComponent<Rigidbody>();
-            body.isKinematic = false;
+            OnLevelStarted();
         }
 
         foreach (Gun gun in guns)

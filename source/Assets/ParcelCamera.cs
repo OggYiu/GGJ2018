@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ParcelCamera : MonoBehaviour {
     private Parcel parcel;
+    public float offsetY = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,7 @@ public class ParcelCamera : MonoBehaviour {
     {
         Vector3 parcelPos = parcel.transform.position;
         Vector3 camPos = Camera.main.transform.position;
-        Camera.main.transform.position = new Vector3(camPos.x, parcelPos.y, camPos.z);
+        Camera.main.transform.position = new Vector3(camPos.x, parcelPos.y - this.offsetY, camPos.z);
 
     }
 }
