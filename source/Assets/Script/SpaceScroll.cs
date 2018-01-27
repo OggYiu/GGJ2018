@@ -41,7 +41,7 @@ public class SpaceScroll : MonoBehaviour {
 					CurrentBackground = 1;
 				}
 			}
-		} else if (cam.position.y + Height < CurrentHeight && cam.position.y > StartHeight - 5) {
+		} else if (cam.position.y + Height < CurrentHeight + 5 && cam.position.y > StartHeight - 5) {
 			CurrentHeight -= Height;
 			CurrentBackground -= 1;
 			if (CurrentBackground == 0) {
