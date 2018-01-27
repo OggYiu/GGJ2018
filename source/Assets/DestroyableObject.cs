@@ -45,9 +45,10 @@ public class DestroyableObject : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         Parcel parcel = collision.gameObject.GetComponent<Parcel>();
-        if(parcel != null)
+        if (parcel != null)
         {
             this.body.useGravity = true;
+            GameMgr.Instance.OnGotHit(GameUIMgr.GotHitType.MINUS_10);
             StartSelfDestroy();
         }
     }

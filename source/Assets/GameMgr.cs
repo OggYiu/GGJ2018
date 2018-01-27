@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameMgr : Singleton<GameMgr> {
-    public enum GunType {
+public class GameMgr : Singleton<GameMgr>
+{
+    public enum GunType
+    {
         HAND_GUN,
         MACHINE_GUN,
     }
@@ -74,7 +76,7 @@ public class GameMgr : Singleton<GameMgr> {
 
         this.parcel = FindObjectOfType<Parcel>();
 
-        if(this.showGameStart)
+        if (this.showGameStart)
         {
             Rigidbody body = this.parcel.GetComponent<Rigidbody>();
             body.isKinematic = true;
@@ -95,7 +97,8 @@ public class GameMgr : Singleton<GameMgr> {
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update()
+    {
 
     }
 
@@ -134,5 +137,15 @@ public class GameMgr : Singleton<GameMgr> {
         isGameEnded = true;
 
         FadeOut();
+    }
+
+    public void OnGotHit(GameUIMgr.GotHitType type)
+    {
+        GameUIMgr.Instance.ShowGotHit(type);
+    }
+
+    public void OnGotScore(GameUIMgr.GotScoreType type, GameObject target)
+    {
+        GameUIMgr.Instance.ShowGotScore(type, target);
     }
 }

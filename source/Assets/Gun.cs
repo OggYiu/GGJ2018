@@ -101,6 +101,7 @@ public class Gun : MonoBehaviour {
                 {
                     rb.useGravity = true;
                     destroyableObject.StartSelfDestroy();
+                    GameMgr.Instance.OnGotScore(GameUIMgr.GotScoreType.SCORE_10, destroyableObject.gameObject);
                 }
                 //Debug.Log("hit " + rb.gameObject.name);
             }

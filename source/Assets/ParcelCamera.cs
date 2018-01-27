@@ -18,6 +18,7 @@ public class ParcelCamera : MonoBehaviour {
         Vector3 parcelPos = parcel.transform.position;
         Vector3 camPos = Camera.main.transform.position;
         Camera.main.transform.position = new Vector3(camPos.x, parcelPos.y - this.offsetY, camPos.z);
+        GameUIMgr.Instance.SetHeight((int)parcelPos.y);
 
     }
 }

@@ -317,6 +317,7 @@
     <Compile Include="Assets\DebugController.cs" />
     <Compile Include="Assets\DestroyableObject.cs" />
     <Compile Include="Assets\GameMgr.cs" />
+    <Compile Include="Assets\GameUIMgr.cs" />
     <Compile Include="Assets\Gun.cs" />
     <Compile Include="Assets\Parcel.cs" />
     <Compile Include="Assets\ParcelCamera.cs" />
