@@ -2,15 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Global : Singleton<Global>
-{
-    protected Global()
-    {
+public class Parcel : MonoBehaviour {
 
-    }
-
-    // Use this for initialization
-    void Start () {
+	// Use this for initialization
+	void Start () {
 		
 	}
 	
