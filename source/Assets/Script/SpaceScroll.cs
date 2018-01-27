@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SkyScroll : MonoBehaviour {
+public class SpaceScroll : MonoBehaviour {
 
 	public Transform Background1;
 	public Transform Background2;
@@ -12,8 +12,8 @@ public class SkyScroll : MonoBehaviour {
 	private int CurrentBackground = 1;
 	public Transform cam;
 
-	private const float Height = 10.5f;
-	private const float StartHeight = 120 + Height;
+	private const float Height = 21f;
+	private const float StartHeight = 336 + Height;
 
 	private float CurrentHeight = StartHeight;
 	private float BackgroundHeight = Height;
