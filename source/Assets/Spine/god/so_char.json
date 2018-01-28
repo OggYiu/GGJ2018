@@ -1,5 +1,5 @@
 {
-"skeleton": { "hash": "MLpnmQ6cfsqxhjet44JPp7iEXa8", "spine": "3.6.43", "width": 3460.17, "height": 1323.65, "images": "./images/" },
+"skeleton": { "hash": "K1qAZWEnuT/93nBNfPONI8uCh6s", "spine": "3.6.43", "width": 3460.17, "height": 1323.65, "images": "./images/" },
 "bones": [
 	{ "name": "root" },
 	{ "name": "bone", "parent": "root", "rotation": 0.93 },
@@ -43,7 +43,7 @@
 	{ "name": "9", "bone": "bone10" },
 	{ "name": "10", "bone": "bone13" },
 	{ "name": "11", "bone": "root", "attachment": "11" },
-	{ "name": "img_result2", "bone": "bone28", "attachment": "img_result2" },
+	{ "name": "img_result2", "bone": "bone28", "attachment": "img_result3" },
 	{ "name": "img_box2", "bone": "bone27" },
 	{ "name": "img_box", "bone": "root" }
 ],
@@ -104,7 +104,7 @@
 			"img_box": { "x": 2.58, "y": 6.39, "rotation": -0.93, "width": 300, "height": 300 }
 		},
 		"img_result2": {
-			"img_result2": { "x": -57.7, "y": -0.95, "scaleX": 0.403, "scaleY": 0.403, "width": 1920, "height": 1180 }
+			"img_result3": { "x": -57.7, "y": -0.95, "scaleX": 0.403, "scaleY": 0.403, "width": 1920, "height": 1180 }
 		}
 	}
 },
@@ -208,7 +208,7 @@
 				"attachment": [
 					{ "time": 0, "name": null },
 					{ "time": 17.6, "name": null },
-					{ "time": 17.6667, "name": "img_result2" }
+					{ "time": 17.6667, "name": "img_result3" }
 				]
 			}
 		},
