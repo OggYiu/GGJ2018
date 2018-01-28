@@ -10,6 +10,7 @@ public class GameMgr : Singleton<GameMgr>
         HAND_GUN,
         MACHINE_GUN,
         SHORT_GUN,
+        ROCKET_LAUNCHER,
     }
 
     public bool showGameStart = false;
