@@ -171,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunType: 1
+  gameMgr: {fileID: 0}
 --- !u!4 &6980807
 Transform:
   m_ObjectHideFlags: 0
@@ -748,12 +749,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.78, y: 2.89, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &177546310 stripped
-MonoBehaviour:
-  m_PrefabParentObject: {fileID: 114213964171242206, guid: 4bf26aaca66a665438804d18086fe7ff,
-    type: 2}
-  m_PrefabInternal: {fileID: 584066460}
-  m_Script: {fileID: 11500000, guid: 9ee91ff48cacc974486339f917b764ea, type: 3}
 --- !u!1 &232693164
 GameObject:
   m_ObjectHideFlags: 0
@@ -1768,37 +1763,6 @@ Prefab:
       propertyPath: fadeInOutSpirteRenderer
       value: 
       objectReference: {fileID: 982473537}
-    - target: {fileID: 114169907203541544, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: initGunType
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114169907203541544, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: guns.Array.data[3]
-      value: 
-      objectReference: {fileID: 177546310}
-    - target: {fileID: 114213964171242206, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: power
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 114213964171242206, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: prefabBullet
-      value: 
-      objectReference: {fileID: 114837082907760454, guid: 6a3f2f6d55511114f86b3156fa9614c8,
-        type: 2}
-    - target: {fileID: 114213964171242206, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: coolDown
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 114213964171242206, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: numberOfBulletsFire
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bf26aaca66a665438804d18086fe7ff, type: 2}
   m_IsPrefabParent: 0
@@ -2973,6 +2937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunType: 2
+  gameMgr: {fileID: 0}
 --- !u!65 &1040955714
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3758,6 +3723,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gunType: 2
+  gameMgr: {fileID: 0}
 --- !u!65 &1770204937
 BoxCollider:
   m_ObjectHideFlags: 0

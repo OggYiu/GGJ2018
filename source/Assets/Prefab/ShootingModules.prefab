@@ -1731,12 +1731,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showGameStart: 1
   nextLevel: Final_Level2
-  initGunType: 0
+  initGunType: 3
   guns:
   - {fileID: 114993852211474278}
   - {fileID: 114381079564114564}
   - {fileID: 114934396804219518}
-  - {fileID: 114934396804219518}
+  - {fileID: 114213964171242206}
   isGameStarted: 0
   isGameEnded: 0
   fadeInOutSpirteRenderer: {fileID: 0}
@@ -1794,13 +1794,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 1
-  power: 100
-  coolDown: 0.1
+  power: 1000
+  coolDown: 0.3
   upward: 0.5
   isAutoWeapon: 0
-  prefabBullet: {fileID: 114760415357537062, guid: f9464efa844cd1545b84002fd352a24f,
+  prefabBullet: {fileID: 114837082907760454, guid: 6a3f2f6d55511114f86b3156fa9614c8,
     type: 2}
-  numberOfBulletsFire: 10
+  numberOfBulletsFire: 1
   gunFireLife: 0.5
   fireSound: {fileID: 82290501882974612}
 --- !u!114 &114247744110598448
