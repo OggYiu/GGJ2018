@@ -322,6 +322,7 @@
     <Compile Include="Assets\Parcel.cs" />
     <Compile Include="Assets\ParcelCamera.cs" />
     <Compile Include="Assets\Script\Background.cs" />
+    <Compile Include="Assets\Script\BirdMoving.cs" />
     <Compile Include="Assets\Script\BuildingScroll.cs" />
     <Compile Include="Assets\Script\DebugCamera.cs" />
     <Compile Include="Assets\Script\SkyScroll.cs" />
