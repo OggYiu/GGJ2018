@@ -18,15 +18,18 @@ public class Gun : MonoBehaviour {
     private bool isMouseJustDown = false;
     private bool isMouseUp = true;
     private bool isMouseDown = false;
+    private GameMgr gameMgr;
 
     // Use this for initialization
     void Start() {
         coolDownBK = coolDown;
+
+        this.gameMgr = FindObjectOfType<GameMgr>();
     }
 
     // Update is called once per frame
     void Update() {
-        if (GameMgr.Instance.isGameEnded || !GameMgr.Instance.isGameStarted)
+        if (this.gameMgr.isGameEnded || !this.gameMgr.isGameStarted)
         {
             return;
         }
@@ -122,7 +125,7 @@ public class Gun : MonoBehaviour {
                 {
                     rb.useGravity = true;
                     destroyableObject.StartSelfDestroy();
-                    GameMgr.Instance.OnGotScore(GameUIMgr.GotScoreType.SCORE_10, destroyableObject.gameObject);
+                    this.gameMgr.OnGotScore(GameUIMgr.GotScoreType.SCORE_10, destroyableObject.gameObject);
                 }
                 //Debug.Log("hit " + rb.gameObject.name);
             }

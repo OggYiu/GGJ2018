@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class GunItem : MonoBehaviour {
     public GameMgr.GunType gunType;
+    public GameMgr gameMgr;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
+        this.gameMgr = FindObjectOfType<GameMgr>();
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -26,7 +28,7 @@ public class GunItem : MonoBehaviour {
 
     public void GetItem()
     {
-        GameMgr.Instance.GetItem(this.gunType);
+        this.gameMgr.GetItem(this.gunType);
         GameObject.DestroyObject(this.gameObject);
     }
 }

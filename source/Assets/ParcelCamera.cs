@@ -5,8 +5,9 @@ using UnityEngine;
 public class ParcelCamera : MonoBehaviour {
     private Parcel parcel;
     public float offsetY = 0;
-
     public float targetHeight = 0;
+    public GameUIMgr gameUIMgr;
+
     private float lastUpdatedHeight = 0;
     private bool currentHeightSet = false;
 
@@ -30,8 +31,8 @@ public class ParcelCamera : MonoBehaviour {
 
         float diffHeight = currentHeight - lastUpdatedHeight;
         Camera.main.transform.position = new Vector3(camPos.x, lastUpdatedHeight - this.offsetY + diffHeight, camPos.z);
-        GameUIMgr.Instance.SetCurrentHeight((int)currentHeight);
-        GameUIMgr.Instance.SetTargetHeight((int)(this.targetHeight - currentHeight));
+        this.gameUIMgr.SetCurrentHeight((int)currentHeight);
+        this.gameUIMgr.SetTargetHeight((int)(this.targetHeight - currentHeight));
 
         lastUpdatedHeight = currentHeight;
     }

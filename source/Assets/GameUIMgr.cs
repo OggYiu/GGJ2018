@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GameUIMgr : Singleton<GameUIMgr>
+public class GameUIMgr : MonoBehaviour
 {
     public enum GotHitType
     {

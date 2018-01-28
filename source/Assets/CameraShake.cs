@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraShake : Singleton<CameraShake>
+public class CameraShake : MonoBehaviour
 {
 
     public bool debugMode = false;//Test-run/Call ShakeCamera() on start

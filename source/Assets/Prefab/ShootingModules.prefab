@@ -1731,7 +1731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   showGameStart: 1
   nextLevel: Final_Level2
-  initGunType: 2
+  initGunType: 0
   guns:
   - {fileID: 114993852211474278}
   - {fileID: 114381079564114564}
@@ -2179,6 +2179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   offsetY: -2
   targetHeight: 84.5
+  gameUIMgr: {fileID: 114349594314073574}
 --- !u!114 &114934396804219518
 MonoBehaviour:
   m_ObjectHideFlags: 1

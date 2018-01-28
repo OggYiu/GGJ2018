@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class StageUI : Singleton<StageUI>
+public class StageUI : MonoBehaviour
 {
     public Image imageStageBegin;
     public Image imageStageClear;
     const float UI_INIT_POS_X = -350;
+    private GameMgr gameMgr;
     // Use this for initialization
     void Start () {
+        this.gameMgr = FindObjectOfType<GameMgr>();
     }
 	
 	// Update is called once per frame
@@ -30,7 +32,7 @@ public class StageUI : Singleton<StageUI>
 
     public void onShowStageBeginPhase2Ended()
     {
-        GameMgr.Instance.OnLevelStarted();
+        this.gameMgr.OnLevelStarted();
     }
 
     public void ShowStageClear()
@@ -47,6 +49,6 @@ public class StageUI : Singleton<StageUI>
 
     public void onShowStageClearPhase2Ended()
     {
-        GameMgr.Instance.OnLevelEnded();
+        this.gameMgr.OnLevelEnded();
     }
 }

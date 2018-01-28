@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ChansHand : MonoBehaviour {
-
+    private StageUI stageUI;
 	// Use this for initialization
 	void Start () {
-		
+        this.stageUI = FindObjectOfType<StageUI>();
 	}
 	
 	// Update is called once per frame
@@ -22,7 +22,7 @@ public class ChansHand : MonoBehaviour {
             body.useGravity = false;
             body.isKinematic = true;
 
-            StageUI.Instance.ShowStageClear();
+            this.stageUI.ShowStageClear();
         }
     }
 }
