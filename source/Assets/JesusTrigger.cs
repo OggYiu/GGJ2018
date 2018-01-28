@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class JesusTrigger : MonoBehaviour {
     public GameObject prefabSpineAnimation;
+    public AudioSource bgMusic;
+    public AudioSource bgHoly;
     private bool showed = false;
     private Parcel parcel;
     private GameMgr gameMgr;
@@ -35,6 +37,8 @@ public class JesusTrigger : MonoBehaviour {
 
             this.parcel.enabled = false;
             this.gameMgr.isGameEnded = true;
+            bgMusic.Stop();
+            bgHoly.Play();
         }
     }
 }
