@@ -18,14 +18,16 @@ public class BirdMoving : MonoBehaviour {
 			Bird.localPosition = new Vector3 (Bird.localPosition.x + 0.1f, Bird.localPosition.y, Bird.localPosition.z);
 		}
 
-		Debug.Log ("Start Flying " + Bird.localPosition.x);
+		//Debug.Log ("Start Flying " + Bird.localPosition.x);
+
 		if (Bird.localPosition.x > 30) {
 			DestroyObject(Bird);
+			StartFly = false;
 		}
 	}
 
 	private void OnTriggerEnter(Collider other) {
-		Debug.Log ("Start Flying");
+		//Debug.Log ("Start Flying");
 		StartFly = true;
 	}
 }
