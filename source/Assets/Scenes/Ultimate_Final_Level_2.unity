@@ -157,64 +157,6 @@ Prefab:
       propertyPath: fadeInOutSpirteRenderer
       value: 
       objectReference: {fileID: 1668569723}
-    - target: {fileID: 114169907203541544, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: showGameStart
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1489538853834876, guid: 4bf26aaca66a665438804d18086fe7ff, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114587602550542290, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: speed
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 23953719307943722, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23892408826607986, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 23378919722469000, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114993852211474278, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: power
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 224004547844210600, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -28.099976
-      objectReference: {fileID: 0}
-    - target: {fileID: 114923479018365102, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: offsetY
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4512606989272722, guid: 4bf26aaca66a665438804d18086fe7ff, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 224085763812878240, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: m_AnchoredPosition.y
-      value: -28.099976
-      objectReference: {fileID: 0}
-    - target: {fileID: 114169907203541544, guid: 4bf26aaca66a665438804d18086fe7ff,
-        type: 2}
-      propertyPath: initGunType
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bf26aaca66a665438804d18086fe7ff, type: 2}
   m_IsPrefabParent: 0

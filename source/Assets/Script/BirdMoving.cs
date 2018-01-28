@@ -41,7 +41,7 @@ public class BirdMoving : MonoBehaviour {
 		}
 
 		if (Bird.localPosition.x < -30 || Bird.localPosition.x > 30) {
-			DestroyObject(Bird);
+			DestroyObject(this.gameObject);
 			StartFly = false;
 		}
 	}

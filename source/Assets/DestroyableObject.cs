@@ -12,6 +12,8 @@ public class DestroyableObject : MonoBehaviour {
     private float lifeTimeAfterSelfDestroyStarted = SELF_DESTROY_TIME;
     private bool isDead = false;
     private SpriteRenderer spriteRenderer;
+    private GameMgr gameMgr;
+    private CameraShake cameraShake;
 
     //private Vector3 backupPos;
 
@@ -21,6 +23,8 @@ public class DestroyableObject : MonoBehaviour {
         this.spriteRenderer = this.gameObject.GetComponent<SpriteRenderer>();
         this.boxCollider = this.gameObject.GetComponent<BoxCollider>();
         this.backupPos = this.transform.position;
+        this.gameMgr = FindObjectOfType<GameMgr>();
+        this.cameraShake = FindObjectOfType<CameraShake>();
     }
 	
 	// Update is called once per frame
@@ -48,8 +52,8 @@ public class DestroyableObject : MonoBehaviour {
         if (parcel != null)
         {
             this.body.useGravity = true;
-            GameMgr.Instance.OnGotHit(GameUIMgr.GotHitType.MINUS_10);
-            CameraShake.Instance.ShakeCamera(0.2f, 0.1f);
+            this.gameMgr.OnGotHit(GameUIMgr.GotHitType.MINUS_10);
+            this.cameraShake.ShakeCamera(0.2f, 0.1f);
             StartSelfDestroy();
         }
     }

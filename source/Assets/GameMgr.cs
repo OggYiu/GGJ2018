@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameMgr : Singleton<GameMgr>
+public class GameMgr : MonoBehaviour
 {
     public enum GunType
     {
@@ -21,6 +21,8 @@ public class GameMgr : Singleton<GameMgr>
     public bool isGameEnded = false;
     public SpriteRenderer fadeInOutSpirteRenderer;
     public AudioSource audioChangeGun;
+    private StageUI stageUI;
+    private GameUIMgr gameUIMgr;
 
     private Gun myGun;
     private Parcel parcel;
@@ -75,6 +77,9 @@ public class GameMgr : Singleton<GameMgr>
     // Use this for initialization
     void Start()
     {
+        this.gameUIMgr = FindObjectOfType<GameUIMgr>();
+        this.stageUI = FindObjectOfType<StageUI>();
+
         this.FadeIn();
 
         this.parcel = FindObjectOfType<Parcel>();
@@ -84,7 +89,7 @@ public class GameMgr : Singleton<GameMgr>
             Rigidbody body = this.parcel.GetComponent<Rigidbody>();
             body.isKinematic = true;
             body.useGravity = false;
-            StageUI.Instance.ShowStageBegin();
+            this.stageUI.ShowStageBegin();
         }
         else
         {
@@ -146,12 +151,12 @@ public class GameMgr : Singleton<GameMgr>
 
     public void OnGotHit(GameUIMgr.GotHitType type)
     {
-        GameUIMgr.Instance.ShowGotHit(type);
+        this.gameUIMgr.ShowGotHit(type);
     }
 
     public void OnGotScore(GameUIMgr.GotScoreType type, GameObject target)
     {
-        GameUIMgr.Instance.ShowGotScore(type, target);
+        this.gameUIMgr.ShowGotScore(type, target);
     }
 
     public void GetItem(GunType gunType)
