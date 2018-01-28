@@ -189,7 +189,7 @@ Prefab:
     - target: {fileID: 114993852211474278, guid: 4bf26aaca66a665438804d18086fe7ff,
         type: 2}
       propertyPath: power
-      value: 2000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 224004547844210600, guid: 4bf26aaca66a665438804d18086fe7ff,
         type: 2}
@@ -203,7 +203,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4512606989272722, guid: 4bf26aaca66a665438804d18086fe7ff, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 320
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114169907203541544, guid: 4bf26aaca66a665438804d18086fe7ff,
+        type: 2}
+      propertyPath: nextLevel
+      value: Ultimate_Final_Stage_2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4bf26aaca66a665438804d18086fe7ff, type: 2}
@@ -6523,7 +6528,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1184697863
 SpriteRenderer:
   m_ObjectHideFlags: 0
