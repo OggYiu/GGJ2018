@@ -20,12 +20,13 @@ public class GameUIMgr : Singleton<GameUIMgr>
 
     public GameObject[] prefabGotHitImages;
     public GameObject[] prefabGotScoreImages;
-    public Image[] heightImages;
+    public Image[] currentHeightImages;
+    public Image[] targetHeightImages;
     public Sprite[] heightSprites;
     private Parcel parcel;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         parcel = FindObjectOfType<Parcel>();
 
     }
@@ -51,13 +52,37 @@ public class GameUIMgr : Singleton<GameUIMgr>
         DestroyObject(targetImage, 1.0f);
     }
 
-    public void SetHeight(int height)
+    public void SetCurrentHeight(int height)
     {
-        Image image10000 = heightImages[4];
-        Image image1000 = heightImages[3];
-        Image image100 = heightImages[2];
-        Image image10 = heightImages[1];
-        Image image1 = heightImages[0];
+        Image image10000 = currentHeightImages[4];
+        Image image1000 = currentHeightImages[3];
+        Image image100 = currentHeightImages[2];
+        Image image10 = currentHeightImages[1];
+        Image image1 = currentHeightImages[0];
+
+        int digit1 = height % 10;
+        int digit2 = (int)((height % 100) / 10);
+        int digit3 = (int)((height % 1000) / 100);
+        int digit4 = (int)((height % 10000) / 1000);
+        int digit5 = (int)((height % 100000) / 10000);
+
+        if (digit1 >= 0 && digit2 >= 0 && digit3 >= 0 && digit4 >= 0)
+        {
+            image10000.sprite = heightSprites[digit5];
+            image1000.sprite = heightSprites[digit4];
+            image100.sprite = heightSprites[digit3];
+            image10.sprite = heightSprites[digit2];
+            image1.sprite = heightSprites[digit1];
+        }
+    }
+
+    public void SetTargetHeight(int height)
+    {
+        Image image10000 = targetHeightImages[4];
+        Image image1000 = targetHeightImages[3];
+        Image image100 = targetHeightImages[2];
+        Image image10 = targetHeightImages[1];
+        Image image1 = targetHeightImages[0];
 
         int digit1 = height % 10;
         int digit2 = (int)((height % 100) / 10);
