@@ -464,7 +464,7 @@
     <None Include="Assets\Spine\Examples\Spine\Strechyman\stretchyman-diffuse-pma.atlas.txt" />
     <None Include="Assets\Spine\Examples\Spine\spineboy-pro\spineboy.atlas.txt" />
     <None Include="Assets\Spine\Examples\Spine\spineboy-unity\spineboy.atlas.txt" />
-    <None Include="Assets\Spine\god\so_char.txt" />
+    <None Include="Assets\Spine\god\so_char.atlas.txt" />
     <None Include="Assets\Spine\spine-unity\Editor\Resources\SpineAssetDatabaseMarker.txt" />
     <None Include="Assets\Spine\spine-unity\Modules\CustomMaterials\SkeletonRendererCustomMaterials.txt" />
     <None Include="Assets\Spine\spine-unity\Modules\Ghost\Shaders\Spine-Special-Skeleton-Ghost.shader" />
