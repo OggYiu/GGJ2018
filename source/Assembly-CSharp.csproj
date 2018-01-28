@@ -60,6 +60,7 @@
      <Compile Include="Assets\GameUIMgr.cs" />
      <Compile Include="Assets\Gun.cs" />
      <Compile Include="Assets\GunItem.cs" />
+     <Compile Include="Assets\JesusTrigger.cs" />
      <Compile Include="Assets\Parcel.cs" />
      <Compile Include="Assets\ParcelCamera.cs" />
      <Compile Include="Assets\Script\Background.cs" />
@@ -222,8 +223,8 @@
      <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\SpritesVertexLit.shader" />
      <None Include="Assets\Spine\spine-unity\Modules\Ghost\Shaders\Spine-Special-Skeleton-Ghost.shader" />
      <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\CGIncludes\SpriteVertexLighting.cginc" />
-     <None Include="Assets\Spine\god\so_char.atlas.txt" />
      <None Include="Assets\Spine\Examples\Spine\Dragon\dragon.atlas.txt" />
+     <None Include="Assets\Spine\God2\so_char.atlas.txt" />
      <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\CameraDepthNormalsTexture.shader" />
      <None Include="Assets\Spine\spine-unity\Shaders\Spine-Skeleton-TintBlack.shader" />
      <None Include="Assets\Spine\spine-unity\Modules\Shaders\Sprite\CGIncludes\ShaderShared.cginc" />

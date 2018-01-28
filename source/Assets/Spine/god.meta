@@ -1,8 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:source/Assets/Spine/god.meta
 guid: 701bcf25e6c7b574792be55231d285f6
 folderAsset: yes
 timeCreated: 1517118949
 licenseType: Free
+=======
+guid: dfe2422fb3d8a834795b4e9daf03561e
+folderAsset: yes
+>>>>>>> 27e37209484b26f1cc3f7e4a3123d38f8d2b7f07:source/Assets/Spine/god.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
