@@ -49,6 +49,7 @@ public class DestroyableObject : MonoBehaviour {
         {
             this.body.useGravity = true;
             GameMgr.Instance.OnGotHit(GameUIMgr.GotHitType.MINUS_10);
+            CameraShake.Instance.ShakeCamera(0.2f, 0.1f);
             StartSelfDestroy();
         }
     }

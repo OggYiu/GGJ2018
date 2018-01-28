@@ -9,8 +9,10 @@ public class Gun : MonoBehaviour {
     public float upward = 0;
     public bool isAutoWeapon = false;
     public Bullet prefabBullet;
+    public int numberOfBulletsFire = 1;
     public float gunFireLife = 0.5f;
     public AudioSource fireSound;
+    private float shortGunRadius = 1f;
 
     private float coolDownBK = 0;
     private bool isMouseJustDown = false;
@@ -52,12 +54,31 @@ public class Gun : MonoBehaviour {
             mouseWorldPos = new Vector3(mouseWorldPos.x, mouseWorldPos.y, 0);
 
             // create bullet
-            float screenHeight = Camera.main.orthographicSize * 2.0f;
-            Vector3 bulletPos = new Vector3(mouseWorldPos.x, Camera.main.transform.position.y - screenHeight / 2, -1);
-            prefabBullet.fromPosition = bulletPos;
-            prefabBullet.targetPosition = mouseWorldPos;
-            prefabBullet.gun = this;
-            Bullet bullet = GameObject.Instantiate(prefabBullet);
+            {
+                float screenHeight = Camera.main.orthographicSize * 2.0f;
+                Vector3 bulletPos = new Vector3(mouseWorldPos.x, Camera.main.transform.position.y - screenHeight / 2, -1);
+                prefabBullet.fromPosition = bulletPos;
+                prefabBullet.targetPosition = mouseWorldPos;
+                prefabBullet.gun = this;
+                Bullet bullet = GameObject.Instantiate(prefabBullet);
+            }
+
+            if(this.numberOfBulletsFire > 1)
+            {
+                for(int i = 0; i < this.numberOfBulletsFire-1; ++i)
+                {
+
+                    // create bullet
+                    float screenHeight = Camera.main.orthographicSize * 2.0f;
+                    Vector3 bulletPos = new Vector3(mouseWorldPos.x, Camera.main.transform.position.y - screenHeight / 2, -1);
+                    Vector3 targetPos = mouseWorldPos;
+                    targetPos += new Vector3(Random.Range(-this.shortGunRadius, this.shortGunRadius), Random.Range(-this.shortGunRadius, this.shortGunRadius), -1);
+                    prefabBullet.fromPosition = bulletPos;
+                    prefabBullet.targetPosition = targetPos;
+                    prefabBullet.gun = this;
+                    Bullet bullet = GameObject.Instantiate(prefabBullet);
+                }
+            }
 
             coolDown = coolDownBK;
         }

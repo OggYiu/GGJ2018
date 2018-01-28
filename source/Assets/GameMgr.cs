@@ -9,6 +9,7 @@ public class GameMgr : Singleton<GameMgr>
     {
         HAND_GUN,
         MACHINE_GUN,
+        SHORT_GUN,
     }
 
     public bool showGameStart = false;
@@ -18,6 +19,7 @@ public class GameMgr : Singleton<GameMgr>
     public bool isGameStarted = false;
     public bool isGameEnded = false;
     public SpriteRenderer fadeInOutSpirteRenderer;
+    public AudioSource audioChangeGun;
 
     private Gun myGun;
     private Parcel parcel;
@@ -117,6 +119,8 @@ public class GameMgr : Singleton<GameMgr>
         {
             myGun.gameObject.SetActive(true);
         }
+
+        audioChangeGun.Play();
     }
 
     public void OnLevelStarted()
@@ -147,5 +151,10 @@ public class GameMgr : Singleton<GameMgr>
     public void OnGotScore(GameUIMgr.GotScoreType type, GameObject target)
     {
         GameUIMgr.Instance.ShowGotScore(type, target);
+    }
+
+    public void GetItem(GunType gunType)
+    {
+        ChangeWeapon(gunType);
     }
 }
